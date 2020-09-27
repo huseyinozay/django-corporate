@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+     <div class="container">
+        <div class="row">
+              <div class="col-md-8 offset-2">
+                <div class="card">
+                    {% if product.image %}
+                        <img class="card-img-top" src="{{ product.image.url }}" alt="Card image cap">
+                    {% endif %}
+
+                    <hr>
+
+                    <div class="card-body">
+                        <a class="card-title"><h5>{{ product.name }}</h5></a>
+                            <p><small>{{ product.product_code }}</small></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Ürün Adedi : {{ product.stock }}</li>
+                        <li class="list-group-item">Ürün Fiyatı : {{ product.price }} Türk Lirası</li>
+                    </ul>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 text-center offset-2">
+                {% if about.image %}
+                    <img class="card-img-top" src="{{ about.image.url }}" alt="Card image cap" >
+                {% endif %}
+                <div class="col"><hr></div>
+                <h5 class="text-center">{{ about.title }}</h5>
+                <div class="col"><hr></div>
+                <p class="text-justify">{{ about.content }}</p>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
